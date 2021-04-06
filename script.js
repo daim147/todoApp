@@ -4,10 +4,11 @@ const todosUL = document.getElementById("todos")
 
 const localList = JSON.parse(localStorage.getItem("list"))
 
-localList.forEach(text =>{
+if(localList){
+    localList.forEach(text =>{
     makingList(text)
 })
-
+}
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault()
